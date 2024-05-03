@@ -1,0 +1,23 @@
+.app{
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: end;
+}
+.test{
+    text-align: center;
+}
+.app > a{
+    border-radius: 2px;
+    float: left;
+    text-decoration: none;
+    padding: 10px 16px;
+    color: blue;
+    font-size: 20px;
+    border: 1px solid blue;
+}
+.app > a.active{
+    background-color: rgb(124, 124, 235);
+}
+.app a:hover:not(a.active){background-color: aliceblue;}
