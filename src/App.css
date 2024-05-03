@@ -1,23 +1,39 @@
-.app{
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: end;
+.app {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: end;
 }
-.test{
-    text-align: center;
+.test {
+  text-align: center;
 }
-.app > a{
-    border-radius: 2px;
-    float: left;
-    text-decoration: none;
-    padding: 10px 16px;
-    color: blue;
-    font-size: 20px;
-    border: 1px solid blue;
+.app > a {
+  border-radius: 2px;
+  float: left;
+  text-decoration: none;
+  padding: 10px 16px;
+  color: blue;
+  font-size: 20px;
+  border: 1px solid blue;
 }
-.app > a.active{
-    background-color: rgb(124, 124, 235);
+.app > a.active {
+  background-color: rgb(124, 124, 235);
 }
-.app a:hover:not(a.active){background-color: aliceblue;}
+.app a:hover:not(a.active) {
+  background-color: aliceblue;
+}
+.input {
+  width: 80%;
+  height: 3rem;
+  font-size: 30px;
+  padding: 5px;
+  text-align: start;
+  border-radius: 10px 0px 0px 10px;
+}
+.btn {
+  width: 18%;
+  height: 3.7rem;
+  font-size: 30px;
+  border-radius: 0px 10px 10px 0px;
+}
