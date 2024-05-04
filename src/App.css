@@ -5,10 +5,15 @@
   justify-content: center;
   align-items: end;
 }
+
+.header {
+  border: 3px solid rgba(219, 217, 217, 0.517);
+  width: 100%;
+}
 .test {
   text-align: center;
 }
-.app > a {
+.navlink {
   border-radius: 2px;
   float: left;
   text-decoration: none;
@@ -17,10 +22,10 @@
   font-size: 20px;
   border: 1px solid blue;
 }
-.app > a.active {
+.navlink.active {
   background-color: rgb(124, 124, 235);
 }
-.app a:hover:not(a.active) {
+.navlink:hover:not(a.active) {
   background-color: aliceblue;
 }
 .input {
@@ -36,4 +41,25 @@
   height: 3.7rem;
   font-size: 30px;
   border-radius: 0px 10px 10px 0px;
+}
+
+/* imges|? */
+
+.cartContainer {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 20px;
+  border: 3px solid rgba(219, 217, 217, 0.517);
+  justify-content: center;
+  padding: 25px 0px 25px 0px;
+}
+
+.imageOriginal {
+  width: 250px;
+  height: 100%;
+}
+.cartImages {
+  border: 5px solid black;
+  height: 250px;
 }
