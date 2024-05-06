@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 
-const ApiKingFisher = () => {
+const Columbidae = () => {
   const [data, setData] = useState([]);
 
   const fetchInfo = async () => {
     try {
       let res = await fetch(
-        "https://api.pexels.com/v1/search?query=Kingfisher&orientation=landscape&per_page=40",
+        "https://api.pexels.com/v1/search?query=Columbidae&orientation=landscape&per_page=40",
         {
           headers: {
             Authorization:
@@ -42,4 +42,4 @@ const ApiKingFisher = () => {
   );
 };
 
-export default ApiKingFisher;
+export default Columbidae;

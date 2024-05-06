@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import ApiFetch from './ApiFetch.jsx'
+// import Peacock from './Peacock.jsx'
 import App from './App.jsx'
 
 import './index.css'

@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react";
 
-const FourthApi = () => {
+const Parrot = () => {
   const [data, setData] = useState([]);
-
   const fetchInfo = async () => {
     try {
       let res = await fetch(
-        "https://api.pexels.com/v1/search?query=Columbidae&orientation=landscape&per_page=40",
+        "https://api.pexels.com/v1/search?query=parrot&orientation=landscape&per_page=40",
         {
           headers: {
             Authorization:
@@ -21,17 +20,15 @@ const FourthApi = () => {
       console.log(error);
     }
   };
-  console.log(data);
   useEffect(() => {
     fetchInfo();
   }, []);
 
-  // console.log(data.src.original)
   return (
     <>
       <div className="cartContainer">
-        {data.map((item) => (
-          <div className="cart">
+        {data.map((item, index) => (
+          <div key={index} className="cart">
             <div className="cartImages">
               <img className="imageOriginal" src={item.src.original} />
             </div>
@@ -42,4 +39,4 @@ const FourthApi = () => {
   );
 };
 
-export default FourthApi;
+export default Parrot;

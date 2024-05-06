@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-const ApiFetch = () => {
+const Peacock = () => {
   const [data, setData] = useState([]);
 
   const fetchInfo = async () => {
@@ -30,8 +30,8 @@ const ApiFetch = () => {
   return (
     <>
       <div className="cartContainer">
-        {data.map((item) => (
-          <div className="cart">
+        {data.map((item, index) => (
+          <div key={index} className="cart">
             <div className="cartImages">
               <img className="imageOriginal" src={item.src.original} />
             </div>
@@ -42,4 +42,4 @@ const ApiFetch = () => {
   );
 };
 
-export default ApiFetch;
+export default Peacock;

@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 
-const ApiSecond = () => {
+const KingFisher = () => {
   const [data, setData] = useState([]);
+
   const fetchInfo = async () => {
     try {
       let res = await fetch(
-        "https://api.pexels.com/v1/search?query=parrot&orientation=landscape&per_page=40",
+        "https://api.pexels.com/v1/search?query=Kingfisher&orientation=landscape&per_page=40",
         {
           headers: {
             Authorization:
@@ -20,14 +21,16 @@ const ApiSecond = () => {
       console.log(error);
     }
   };
+  console.log(data);
   useEffect(() => {
     fetchInfo();
   }, []);
 
+  // console.log(data.src.original)
   return (
     <>
       <div className="cartContainer">
-        {data.map((item, index) => (
+        {data.map((item,index) => (
           <div key={index} className="cart">
             <div className="cartImages">
               <img className="imageOriginal" src={item.src.original} />
@@ -39,4 +42,4 @@ const ApiSecond = () => {
   );
 };
 
-export default ApiSecond;
+export default KingFisher;
