@@ -1,8 +1,13 @@
 import React, { useEffect, useState } from "react";
+import './index.css'
 
 const Combined = () => {
   const [data, setData] = useState([]);
 
+
+  function handleChange(){
+    console.log("devilal")
+  }
   const fetchInfo = async () => {
     try {
       let res = await fetch(
@@ -29,10 +34,10 @@ const Combined = () => {
   return (
     <>
       <div className="cartContainer">
-        {data.map((item) => (
-          <div className="cart">
+        {data.map((item,index) => (
+          <div key={index} className="cart">
             <div className="cartImages">
-              <img className="imageOriginal" src={item.src.original} />
+              <img  onClick={handleChange} className="imageOriginal" src={item.src.original} />
             </div>
           </div>
         ))}
