@@ -7,7 +7,7 @@ const Combined = () => {
   const fetchInfo = async () => {
     try {
       let res = await fetch(
-        "https://api.pexels.com/v1/search?query=baby&orientation=landscape&per_page=40",
+        "https://api.pexels.com/v1/search?query=baby&orientation=landscape&per_page=80",
         {
           headers: {
             Authorization:
@@ -34,8 +34,7 @@ const Combined = () => {
           <div key={index} className="cart">
             <div className="cartImages">
               <img
-                onClick={() => {
-                  className="fjldlajw";
+                onClick={() => {console.log(" hy devilal panchal");
                 }}
                 className="imageOriginal"
                 src={item.src.original}
