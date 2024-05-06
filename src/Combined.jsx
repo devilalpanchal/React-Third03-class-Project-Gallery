@@ -1,17 +1,13 @@
 import React, { useEffect, useState } from "react";
-import './index.css'
+import "./index.css";
 
 const Combined = () => {
   const [data, setData] = useState([]);
 
-
-  function handleChange(){
-    console.log("devilal")
-  }
   const fetchInfo = async () => {
     try {
       let res = await fetch(
-        "https://api.pexels.com/v1/search?query=tajmahal&orientation=landscape&per_page=40",
+        "https://api.pexels.com/v1/search?query=baby&orientation=landscape&per_page=40",
         {
           headers: {
             Authorization:
@@ -34,10 +30,16 @@ const Combined = () => {
   return (
     <>
       <div className="cartContainer">
-        {data.map((item,index) => (
+        {data.map((item, index) => (
           <div key={index} className="cart">
             <div className="cartImages">
-              <img  onClick={handleChange} className="imageOriginal" src={item.src.original} />
+              <img
+                onClick={() => {
+                  className="fjldlajw";
+                }}
+                className="imageOriginal"
+                src={item.src.original}
+              />
             </div>
           </div>
         ))}
