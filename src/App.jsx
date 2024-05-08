@@ -3,6 +3,7 @@ import Header from "./Header";
 import Routot from "./Routes";
 import Combined from "./Combined";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Login from "./Component/Login";
 function App() {
   return (
     <>

@@ -61,7 +61,7 @@
   gap: 20px;
   border: 3px solid rgba(219, 217, 217, 0.517);
   justify-content: center;
-  padding: 145px 0px 25px 0px;
+  padding: 15px 0px 10px 0px;
 }
 
 .imageOriginal {
@@ -102,4 +102,13 @@
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+/* matk? */
+.markupline{
+  background-color: #f5f5f5;
+  border: 2px solid rgb(208, 210, 228);
+  color: rgb(76, 72, 22);
+  font-family: Georgia, serif;
+
 }

@@ -7,7 +7,7 @@ const Combined = () => {
   const fetchInfo = async () => {
     try {
       let res = await fetch(
-        "https://api.pexels.com/v1/search?query=baby&orientation=landscape&per_page=80",
+        "https://api.pexels.com/v1/search?query=baby&orientation=landscape&per_page=20",
         {
           headers: {
             Authorization:
@@ -33,8 +33,9 @@ const Combined = () => {
         {data.map((item, index) => (
           <div key={index} className="cart">
             <div className="cartImages">
-              <img
-                onClick={() => {console.log(" hy devilal panchal");
+              <img 
+                onClick={() => {
+                  alert("Believe me I can handle it")
                 }}
                 className="imageOriginal"
                 src={item.src.original}
