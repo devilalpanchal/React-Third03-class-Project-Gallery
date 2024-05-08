@@ -7,7 +7,7 @@ import LandingPage from "./LandingPage";
 function App() {
   return (
     <>
-    <LandingPage/>
+    {/* <LandingPage/> */}
       <Header/>
       <Routot/>
       <Combined/>
