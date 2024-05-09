@@ -1,12 +1,17 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-// import Peacock from './Peacock.jsx'
-import App from './App.jsx'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App.jsx";
+import { Auth0Provider } from "@auth0/auth0-react";
+import "./index.css";
 
-import './index.css'
-
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <Auth0Provider
+    domain="dev-yo72kz2785trw6yg.us.auth0.com"
+    clientId="qE1lirY8al0SbIwJNUS6sDR5HWUNA5aw"
+    authorizationParams={{
+      redirect_uri: window.location.origin,
+    }}
+  >
     <App />
-  </React.StrictMode>,
-)
+  </Auth0Provider>
+);

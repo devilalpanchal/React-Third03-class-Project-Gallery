@@ -7,7 +7,11 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Login from "./Component/Login";
+import { useAuth0 } from "@auth0/auth0-react";
+import Routot from "./Routes";
+import Combined from "./Combined";
 const Header = () => {
+  const { logout } = useAuth0();
   return (
     <>
       <BrowserRouter>
@@ -16,7 +20,7 @@ const Header = () => {
         </Routes>
 
         <header>
-          <h1 className="test"> React Class Project 03</h1>
+          <h1 className="test"> Gallery Project</h1>
           <Navbar expand="lg" className="bg-body-tertiary">
             <Container fluid className="font">
               <Navbar.Brand href="/">Gallery</Navbar.Brand>
@@ -42,11 +46,9 @@ const Header = () => {
                       Something else here
                     </NavDropdown.Item>
                   </NavDropdown>
-                  <Nav.Link href="#contact">
-                  <Link to="/login">Login</Link>
-                </Nav.Link>
+                  <Nav.Link href="#contact"  onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>Logout</Nav.Link>
                 </Nav>
-               
+
                 <Form className="d-flex">
                   <Form.Control
                     type="search"
@@ -56,7 +58,6 @@ const Header = () => {
                   />
                   <Button variant="outline-success">Search</Button>
                 </Form>
-              
               </Navbar.Collapse>
             </Container>
           </Navbar>
@@ -74,6 +75,8 @@ const Header = () => {
           </marquee>
         </header>
       </BrowserRouter>
+      <Routot/>
+      <Combined/>
     </>
   );
 };
