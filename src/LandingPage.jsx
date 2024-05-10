@@ -6,8 +6,7 @@ import gif from "./assets/gif.mp4";
 import MainImage from "./assets/MainImage.jpg";
 import { useAuth0 } from "@auth0/auth0-react";
 const LandingPage = () => {
-  const { loginWithRedirect,loginWithPopup } = useAuth0();
-
+  const { loginWithRedirect } = useAuth0();
   return (
     <>
       <div className="navbarmain">
@@ -24,7 +23,7 @@ const LandingPage = () => {
               <Nav.Link className="mainnavlink" href="#pricing" onClick={() => alert('First Login')}>
                 Pricing
               </Nav.Link>
-              <Nav.Link onClick={() => loginWithPopup()}    className="mainnavlink" href="#login">
+              <Nav.Link  onClick={() => loginWithRedirect()}  className="mainnavlink" href="#login">
                 Login
               </Nav.Link>
             </Nav>
@@ -57,7 +56,7 @@ const LandingPage = () => {
         ></video>
       </div>
       <div>
-        <button  onClick={() => loginWithRedirect()} className="loginBtn">Login</button>
+        <button   onClick={() => loginWithRedirect()} className="loginBtn">Login</button>
       </div>
       <div>
         <p className="loginBtn02">#Coded by Developer Devid</p>

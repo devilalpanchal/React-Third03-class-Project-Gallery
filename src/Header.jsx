@@ -5,11 +5,11 @@ import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route} from "react-router-dom";
 import Login from "./Component/Login";
-import { useAuth0 } from "@auth0/auth0-react";
 import Routot from "./Routes";
 import Combined from "./Combined";
+import { useAuth0 } from "@auth0/auth0-react";
 const Header = () => {
   const { logout } = useAuth0();
   return (
@@ -46,7 +46,7 @@ const Header = () => {
                       Something else here
                     </NavDropdown.Item>
                   </NavDropdown>
-                  <Nav.Link href="#contact"  onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>Logout</Nav.Link>
+                  <Nav.Link href="#contact" onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })} >Logout</Nav.Link>
                 </Nav>
 
                 <Form className="d-flex">
