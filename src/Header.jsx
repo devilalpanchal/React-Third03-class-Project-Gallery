@@ -10,6 +10,7 @@ import Login from "./Component/Login";
 import Routot from "./Routes";
 import Combined from "./Combined";
 import { useAuth0 } from "@auth0/auth0-react";
+import Galleryrotation from "./Galleryrotation";
 const Header = () => {
   const { logout } = useAuth0();
   return (
@@ -77,6 +78,7 @@ const Header = () => {
       </BrowserRouter>
       <Routot/>
       <Combined/>
+      <Galleryrotation/>
     </>
   );
 };
