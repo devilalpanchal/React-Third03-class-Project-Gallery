@@ -20,7 +20,7 @@ const Header = () => {
           <Route path="/login" element={<Login />} />
         </Routes>
 
-        <header>
+        <header className="head">
           <h1 className="test"> Gallery Project</h1>
           <Navbar expand="lg" className="bg-body-tertiary">
             <Container fluid className="font">

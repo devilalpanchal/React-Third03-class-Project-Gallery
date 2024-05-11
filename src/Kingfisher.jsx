@@ -26,11 +26,10 @@ const KingFisher = () => {
     fetchInfo();
   }, []);
 
-  // console.log(data.src.original)
   return (
     <>
       <div className="cartContainer">
-        {data.map((item,index) => (
+        {data.map((item, index) => (
           <div key={index} className="cart">
             <div className="cartImages">
               <img className="imageOriginal" src={item.src.original} />
