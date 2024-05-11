@@ -1,18 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
-import { BrowserRouter, Routes, Route} from "react-router-dom";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Login from "./Component/Login";
 import Routot from "./Routes";
 import Combined from "./Combined";
 import { useAuth0 } from "@auth0/auth0-react";
-import Galleryrotation from "./Galleryrotation";
 const Header = () => {
   const { logout } = useAuth0();
+  const [inpute, setInput] = useState("developer");
   return (
     <>
       <BrowserRouter>
@@ -47,15 +47,41 @@ const Header = () => {
                       Something else here
                     </NavDropdown.Item>
                   </NavDropdown>
-                  <Nav.Link href="#contact" onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })} >Logout</Nav.Link>
+                  <Nav.Link
+                    href="#contact"
+                    onClick={() =>
+                      logout({
+                        logoutParams: { returnTo: window.location.origin },
+                      })
+                    }
+                  >
+                    Logout
+                  </Nav.Link>
                 </Nav>
 
                 <Form className="d-flex">
+                  <h4 className="developername">{inpute}</h4>
+                  <input
+                    style={{ display: "none" }}
+                    type="text"
+                    placeholder="enter  baccha k nam "
+                    onKeyDown={(e) => {
+                      if (e.key === "Enter") {
+                        console.log(setInput(e.target.value));
+                      }
+                    }}
+                  />
                   <Form.Control
-                    type="search"
+                    onKeyDown={(e) => {
+                      if (e.key === "Enter") {
+                        console.log(setInput(e.target.value));
+                      }
+                    }}
+                    type="text"
                     placeholder="Search"
                     className="me-2"
                     aria-label="Search"
+                    name="searchbarr"
                   />
                   <Button variant="outline-success">Search</Button>
                 </Form>
@@ -76,9 +102,13 @@ const Header = () => {
           </marquee>
         </header>
       </BrowserRouter>
-      <Routot/>
-      <Combined/>
-      <Galleryrotation/>
+
+      <Routot />
+
+      <Combined
+        link={`https://api.pexels.com/v1/search?query=${inpute}&orientation=landscape&per_page=80`}
+      />
+
     </>
   );
 };

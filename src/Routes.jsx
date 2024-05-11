@@ -7,12 +7,12 @@ import {
   Route,
   NavLink,
 } from "react-router-dom";
-// import Peacock from "./Peacock";
 import KingFisher from "./Kingfisher";
 import Parrot from "./Parrot";
 import Columbidae from "./Columbidae";
+import Header from "./Header";
+import About from "./About";
 const Peacock = lazy(() => import("./Peacock"));
-// const Addproduct = lazy(() => import("./Addproduct"));
 
 const Routot = () => {
   return (
@@ -83,7 +83,6 @@ const Routot = () => {
             }
             to="/Combined"
           >
-          
             &raquo;
           </NavLink>
         </nav>
@@ -99,6 +98,8 @@ const Routot = () => {
           <Route path="/kingfisher" element={<KingFisher />} />
           <Route path="/Parrot" element={<Parrot />} />
           <Route path="/Columbidae" element={<Columbidae />} />
+          <Route path="/Header" element={<Header />} />
+          <Route path="/About" element={<About />} />
         </Routes>
       </>
     </Router>

@@ -158,9 +158,8 @@
   color: rgb(255, 255, 255);
 }
 
-
 /* to btn */
-.loginBtn{
+.loginBtn {
   position: absolute;
   bottom: 50px;
   right: 100px;
@@ -170,12 +169,12 @@
   border-radius: 5px;
   background-color: #ffffff;
 }
-.loginBtn:hover{
+.loginBtn:hover {
   background-color: #d8cccc;
   color: rgb(224, 27, 27);
   font-size: 18px;
 }
-.loginBtn02{
+.loginBtn02 {
   position: absolute;
   bottom: 5px;
   left: 10px;
@@ -186,10 +185,16 @@
   color: #b0b6e5;
   text-decoration: none;
 }
-.loginBtn02:hover{
+.loginBtn02:hover {
   color: rgb(224, 27, 27);
   font-size: 18px;
 }
 
-
- 
+/* deveoper in comnbined component|? */
+.developername {
+  color: rgba(70, 70, 220, 0.957);
+  margin-right: 20px;
+  margin-top: 5px;
+  padding: 2px;
+  font-size: 25px;
+}
