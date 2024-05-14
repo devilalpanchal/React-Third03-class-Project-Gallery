@@ -24,7 +24,7 @@ const Header = () => {
           <h1 className="test"> Gallery Project</h1>
           <Navbar expand="lg" className="bg-body-tertiary">
             <Container fluid className="font">
-              <Navbar.Brand href="/">Gallery</Navbar.Brand>
+              <Navbar.Brand href="#">Gallery</Navbar.Brand>
               <Navbar.Toggle aria-controls="navbarScroll" />
               <Navbar.Collapse id="navbarScroll">
                 <Nav
